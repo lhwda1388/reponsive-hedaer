@@ -1,0 +1,130 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrap header .nav-bar {
+  position: relative;
+  background-color: #546e7a;
+  height: 80px;
+}
+
+.wrap header .nav-bar .nav-bar__logo {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+
+.wrap header .nav-bar .nav-bar__menu-box .nav-bar__menu {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+
+.wrap header .nav-bar .nav-bar__menu-box .nav-bar__menu::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.wrap header .nav-bar .nav-bar__menu-box .nav-bar__menu li {
+  float: left;
+  padding: 0 10px;
+  line-height: 38px;
+}
+
+.wrap header .nav-bar .nav-bar__menu-box .nav-bar__menu li:hover {
+  background-color: #ffab91;
+  border-radius: 5px 5px;
+}
+
+.wrap header .nav-bar .nav-bar__menu-box .nav-bar__sns {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+.wrap header .nav-bar .nav-bar__menu-box .nav-bar__sns::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.wrap header .nav-bar .nav-bar__menu-box .nav-bar__sns li {
+  float: left;
+  padding: 0 5px;
+}
+
+.wrap header .nav-bar .nav-bar__ham {
+  display: none;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  .wrap header .nav-bar {
+    height: 50px;
+  }
+  .wrap header .nav-bar .nav-bar__logo {
+    left: 20px;
+    top: 17px;
+  }
+
+  .wrap header .nav-bar .nav-bar__menu-box {
+    display: none;
+  }
+
+  .wrap header .nav-bar .nav-bar__menu-box.on {
+    display: block;
+    background-color: #546e7a;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .wrap header .nav-bar .nav-bar__menu-box .nav-bar__menu,
+  .wrap header .nav-bar .nav-bar__menu-box .nav-bar__sns {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+
+  .wrap header .nav-bar .nav-bar__menu-box .nav-bar__menu li,
+  .wrap header .nav-bar .nav-bar__menu-box .nav-bar__sns li {
+    width: 100%;
+    display: inline-block;
+    padding: 5px 0;
+  }
+
+  .wrap header .nav-bar .nav-bar__ham {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 17px;
+  }
+
+  .wrap header .nav-bar .nav-bar__ham span {
+    display: block;
+    background-color: #ffab91;
+    width: 22px;
+    height: 4px;
+    margin: 4px 0;
+  }
+
+  .wrap header .nav-bar .nav-bar__ham::after {
+    content: '';
+    display: block;
+    background-color: #ffab91;
+    width: 22px;
+    height: 4px;
+  }
+
+  .wrap header .nav-bar .nav-bar__ham::before {
+    content: '';
+    display: block;
+    background-color: #ffab91;
+    width: 22px;
+    height: 4px;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <nav class="nav-bar">
+          <h1 class="nav-bar__logo"><a href="#">DreamCoding</a></h1>
+          <a href="#" class="nav-bar__ham" id="nav-bar__ham">
+            <span></span>
+          </a>
+          <div class="nav-bar__menu-box" id="nav-bar__menu-box">
+            <ul class="nav-bar__menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Weddings</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Bookings</a></li>
+            </ul>
+            <ul class="nav-bar__sns">
+              <li>Twitter</li>
+              <li>FaceBook</li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <script>
+      window.onload = function () {
+        var hamBtn = document.getElementById('nav-bar__ham')
+        hamBtn.onclick = function (a) {
+          document.getElementById('nav-bar__menu-box').classList.toggle('on')
+        }
+      }
+    </script>
+  </body>
+</html>
